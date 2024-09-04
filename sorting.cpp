@@ -99,7 +99,7 @@ int main(){
     string txt_input = "sorting-";
     cin >> cin_txt;
     txt_input += cin_txt + "-dataset.txt";
-    ifstream input("sorting-desord-dataset.txt");
+    ifstream input(txt_input);
     int num;
     while (input >> num){
         vector.push_back(num);
