@@ -55,7 +55,7 @@ def strassen(A, B):
         P5 = strassen(A11 + A12, B22)
         P6 = strassen(A21 - A11, B11 + B12)
         P7 = strassen(A12 - A22, B21 + B22)
-        C11 = P1 + P4 - P5 + P7 #Luego se juntan en los 4 cuadrantes 
+        C11 = P1 + P4 - P5 + P7 #Luego se hacen las operaciones correspondientes para obtener los 4 cuadrantes 
         C12 = P3 + P5
         C21 = P2 + P4
         C22 = P1 + P3 - P2 + P6
@@ -103,3 +103,4 @@ def main():
         print(fila)
 if __name__ == "__main__":
     main()
+
