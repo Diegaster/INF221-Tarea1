@@ -92,7 +92,6 @@ void quicksort(vector<int> &v, int inicio, int fin){
     }
 
 }
-
 int main(){
     vector<int> vector, vector_ss, vector_ms, vector_qs, vector_s;
     string cin_txt;
@@ -115,24 +114,40 @@ int main(){
     auto end_ss = chrono::high_resolution_clock::now();
     chrono::duration<double> duration_ss = end_ss - start_ss;
     cout << "Tiempo de ejecución SelSort: " << duration_ss.count() << " segundos" << std::endl;
-
+    cout << "Vector ordenado mediante SelSort: ";
+    for (auto outp:vector_ss){
+        cout << outp << " ";
+    }
+    cout << endl;
     auto start_ms = chrono::high_resolution_clock::now();
     mergesort(vector_ms, 0, (tam_vector - 1));
     auto end_ms = chrono::high_resolution_clock::now();
     chrono::duration<double> duration_ms = end_ms - start_ms;
     cout << "Tiempo de ejecución MergeSort: " << duration_ms.count() << " segundos" << std::endl;
-
+    cout << "Vector ordenado mediante MergeSort: ";
+    for (auto outp:vector_ms){
+        cout << outp << " ";
+    }
+    cout << endl;
     auto start_qs = chrono::high_resolution_clock::now();
     quicksort(vector_qs, 0, (tam_vector - 1));
     auto end_qs = chrono::high_resolution_clock::now();
     chrono::duration<double> duration_qs = end_qs - start_qs;
     cout << "Tiempo de ejecución QuickSort: " << duration_qs.count() << " segundos" << std::endl;
-
+    cout << "Vector ordenado mediante QuickSort: ";
+    for (auto outp:vector_qs){
+        cout << outp << " ";
+    }
+    cout << endl;
     auto start_s = chrono::high_resolution_clock::now();
     sort(vector_s.begin(), vector_s.end());
     auto end_s = chrono::high_resolution_clock::now();
     chrono::duration<double> duration_s = end_s - start_s;
     cout << "Tiempo de ejecución Sort por defecto: " << duration_s.count() << " segundos" << std::endl;
+    cout << "Vector ordenado mediante Sort: ";
+    for (auto outp:vector_s){
+        cout << outp << " ";
+    }
     cout << endl;
 
     return 0;
